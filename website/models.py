@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class reguser(models.Model):
+class RegUser(models.Model):
     Name=models.CharField(max_length=100)
     Designation= models.CharField(max_length=100)
     Organisation = models.CharField(max_length=100)

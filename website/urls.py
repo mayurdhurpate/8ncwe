@@ -20,6 +20,5 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
   
     url(r'^register$', views.register, name='register'),
-    url(r'^regsubmit/$', views.regsubmit, name='regsubmit')]
-    
+    url(r'^regsubmit/$', views.regsubmit, name='regsubmit')
 ]

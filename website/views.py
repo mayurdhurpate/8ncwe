@@ -16,7 +16,7 @@ def register(request):
 
 def regsubmit(request):
     if request.method=='POST':
-        u=Reguser.objects.create(Name=request.POST['Name'],
+        u=RegUser.objects.create(Name=request.POST['Name'],
                                     Designation=request.POST['Designation'],
                                     Organisation=request.POST['Organisation'],
                                     Address= request.POST['Address']   ,
@@ -33,13 +33,13 @@ def regsubmit(request):
       
 
         
-        send_mail(
-            'Subject here',
-            'Thanks for submission. We have recorded your response.\nTitle of Paper'+u.Name+'\nName of 1st Author'+u.Mob+'\nCollege/university'
-            +u.college+'\ndesignation'+u.designation+'\nCo-Author'+u.coauthor+'\nPhone No.'+u.phone+'\nEmail'+u.email,
-            'no-reply@shilpiitbhu.org',
-            [u.email],
-            fail_silently=False,
-        )
+        # send_mail(
+        #     'Subject here',
+        #     'Thanks for submission. We have recorded your response.\nTitle of Paper'+u.Name+'\nName of 1st Author'+u.Mob+'\nCollege/university'
+        #     +u.college+'\ndesignation'+u.designation+'\nCo-Author'+u.coauthor+'\nPhone No.'+u.phone+'\nEmail'+u.email,
+        #     'no-reply@shilpiitbhu.org',
+        #     [u.email],
+        #     fail_silently=False,
+        # )
         return HttpResponse('Your response have been recorded.')
     return HttpResponse('Authentication failed.')
