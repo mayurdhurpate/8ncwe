@@ -37,6 +37,20 @@
 
     <script type="text/javascript" src="/static/js/modernizr.custom.js"></script>
 
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $(".scroll").click(function(event){   
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+      });
+    });
+
+    function blinker() {
+       $('.blinking').fadeOut(500);
+       $('.blinking').fadeIn(500);}
+         setInterval(blinker, 1000);
+    </script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -166,15 +180,18 @@
                      <div class="section-title text-center ">
                             <h2><strong>IMPORTANT DATES</strong></h2>
                     
-                        </div>
+                        </div><div class="blinking" style="float:left; font-size:10px; color:orange;"><u>New</u></div>
                          <p class="intro">Last date of Submission Abstract :<strong>15 October,2016</strong></p>
 
+                         <div class="blinking" style="float:left; font-size:10px; color:orange"><u>New</u></div>
                          <p class="intro">Notification of Acceptation Date of the Abstract :<strong>31 October,2016</strong></p>
+
+                         <div class="blinking" style="float:left; font-size:10px; color:orange;"><u>New</u></div>
                          <p class="intro">Submission of Camera Ready Paper :<strong>15 November,2016</strong></p><br>
 
                           <p class="intro"><strong>Note:</strong> Selected papers from the Conference Proceedings will be published in the Journal of Wind Engineering after review and modifications if required.</p><br>
 
-                          <p class="intro"> Download Sample Paper Form <strong><a target="_blank" href="/static/VIII-NCWE-2016-Abstrat.pdf">Here</a></strong></p>
+                          <p class="intro"> Download Sample Paper Form <button><a target="_blank" href="/static/VIII-NCWE-2016-Abstrat.pdf">Here</a></button></p>
 
 
 
@@ -292,9 +309,10 @@
                          <li><strong>Dr. Ankit Gupta</strong><em> Assistant Professor IIT (BHU)</em></li>
                          <li><strong>Dr. janardan Singh</strong><em> Senior Research Officer IIT (BHU)</em></li>
                          <li><strong>Dr. B.N. Singh</strong><em> Senior Research Officer IIT (BHU)</em></li>
+                         <li><strong>Prof. Damodar Maity</strong><em> FIE Professor IIT Kharagpur</em></li>
                       
                          <li><strong>Prof. Naveen Kwatra</strong><em> TIET Thapar University Patiala</em></li>
-                         <li><strong>Prof. Damodar Maity</strong><em> TIET Thapar University Patiala</em></li>
+                         
                          <li><strong>Dr. Amiya Kumar Samanta</strong><em> NIT Durgapur West Bengal</em></li>
                          <li><strong>Prof. Aparna (Dey) Ghosh</strong><em> EST Shibpur West Bengal</em></li>
                          <li><strong>Dr. Dwarikanath Ratha</strong><em> TIET Thapar University Patiala</em></li>
@@ -399,6 +417,10 @@
                  <li>DD drawn in favor of NCWE 2016,  Payable at SBI ,IIT-BHU Varanasi, India </li><br>
 
                 <li> Last date for the Early Bird registration: 31th October 2016</li> <BR><br>
+
+                <li> Download offline Registration form<a target="_blank" href="/static/17092016_NCWE_Page01-1.jpg"> <button>Page1</button></a>
+                <a target="_blank" href="/static/17092016_NCWE_Page02-1.jpg"  ><button> Page2</button></li> <BR><br>
+
 
                 <a href="register"><button type="button" class="btn btn-info">PROCEED TO REGISTRATION &#8594;</button>
                 </a>
